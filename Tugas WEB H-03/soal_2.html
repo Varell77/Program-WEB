@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit Profile</title>
+
+<style>
+
+body{
+font-family:"Times New Roman";
+background:#dcdcdc;
+}
+
+.container{
+width:800px;
+margin:40px auto;
+border:3px solid gray;
+background:#ddd;
+}
+
+.judul{
+text-align:center;
+font-size:36px;
+font-weight:bold;
+padding:10px;
+border-bottom:3px solid gray;
+}
+
+table{
+width:100%;
+}
+
+td{
+padding:12px;
+vertical-align:top;
+}
+
+.input{
+width:280px;
+padding:6px;
+}
+
+img{
+width:210px;
+height:210px;
+object-fit:cover;
+border:1px solid gray;
+}
+
+.button{
+padding:6px 15px;
+cursor:pointer;
+margin-top:5px;
+}
+
+.password-box{
+position:relative;
+width:280px;
+}
+
+.password-box input{
+width:100%;
+padding:6px;
+}
+
+.eye{
+position:absolute;
+right:10px;
+top:7px;
+cursor:pointer;
+font-size:18px;
+}
+
+</style>
+
+<script>
+
+function previewFoto(event){
+
+let reader = new FileReader();
+
+reader.onload = function(){
+document.getElementById("foto").src = reader.result;
+}
+
+reader.readAsDataURL(event.target.files[0]);
+
+// menghilangkan tulisan pilih file
+document.getElementById("fileInput").style.display = "none";
+
+}
+
+function togglePassword(id, icon){
+
+let input = document.getElementById(id);
+
+if(input.type === "password"){
+input.type = "text";
+icon.innerHTML = "👁";
+}
+else{
+input.type = "password";
+icon.innerHTML = "👁";
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="judul">Edit profile</div>
+
+<form>
+
+<table>
+
+<tr>
+
+<td rowspan="6" style="border-right:2px solid gray; text-align:center; width:300px">
+
+<img id="foto" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Tim_Berners-Lee_CP_2.jpg">
+
+<br><br>
+
+<input type="file" id="fileInput" accept="image/*" onchange="previewFoto(event)">
+
+<br><br>
+
+<button type="button" class="button">Upload</button>
+
+</td>
+
+<td><b>Name</b></td>
+
+<td>
+<input type="text" value="Tim Berners-Lee" class="input">
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>Position</b></td>
+
+<td>
+
+<select class="input">
+
+<optgroup label="Programmer">
+<option selected>Senior Programmer</option>
+<option>Junior Programmer</option>
+</optgroup>
+
+<optgroup label="System Analyst">
+<option>Senior Analyst</option>
+<option>Junior Analyst</option>
+</optgroup>
+
+</select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>Password</b></td>
+
+<td>
+
+<div class="password-box">
+<input type="password" id="pw1" value="admin">
+<span class="eye" onclick="togglePassword('pw1', this)">👁</span>
+</div>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><b>Confirm Password</b></td>
+
+<td>
+
+<div class="password-box">
+<input type="password" id="pw2" value="admin">
+<span class="eye" onclick="togglePassword('pw2', this)">👁</span>
+</div>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td></td>
+
+<td>
+
+<button type="reset" class="button">Reset</button>
+<button type="submit" class="button">Update</button>
+
+</td>
+
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>

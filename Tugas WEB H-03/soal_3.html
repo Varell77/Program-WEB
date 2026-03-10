@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Data</title>
+
+<style>
+
+body{
+font-family: Times New Roman;
+}
+
+table.main{
+width:600px;
+margin:auto;
+border:3px solid black;
+border-collapse:collapse;
+}
+
+.title{
+background:gray;
+color:white;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+padding:5px;
+}
+
+td{
+padding:8px;
+vertical-align:top;
+}
+
+.hobi{
+border:2px solid gray;
+padding:10px;
+}
+
+.submit{
+text-align:right;
+padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form action="proses.html">
+
+<table class="main">
+
+<tr>
+<td colspan="2" class="title">Personal Data</td>
+</tr>
+
+<tr>
+<td width="150">Nama</td>
+<td>
+<input type="text" size="25">
+</td>
+</tr>
+
+<tr>
+<td>Alamat</td>
+<td>
+<textarea rows="3" cols="30"></textarea>
+</td>
+</tr>
+
+<tr>
+<td>Jenis Kelamin</td>
+<td>
+
+<input id="lk" type="radio" name="jk">
+<label for="lk">laki-laki</label><br>
+
+<input id="pr" type="radio" name="jk">
+<label for="pr">perempuan</label>
+
+</td>
+</tr>
+
+<tr>
+<td>Tanggal Lahir</td>
+<td>
+
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+</select>
+
+-
+
+<select>
+<option>Januari</option>
+<option>Februari</option>
+<option>Maret</option>
+<option>April</option>
+<option>Mei</option>
+<option>Juni</option>
+<option>Juli</option>
+<option>Agustus</option>
+<option>September</option>
+<option>Oktober</option>
+<option>November</option>
+<option>Desember</option>
+</select>
+
+-
+
+<select>
+<option>1980</option>
+<option>1981</option>
+<option>1982</option>
+<option>1983</option>
+</select>
+
+</td>
+</tr>
+
+<tr>
+<td>Jurusan</td>
+<td>
+
+<select name="jurusan" style="width:170px;">
+<option value="">-- Pilih Jurusan --</option>
+<option value="teknik_informatika">Teknik Informatika</option>
+<option value="sistem_informasi">Sistem Informasi</option>
+<option value="elektro">Elektro</option>
+<option value="sipil">Sipil</option>
+</select>
+
+</td>
+</tr>
+
+</select>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+
+<div class="hobi">
+
+<b>Hobi</b>
+
+<table width="100%">
+
+<tr>
+
+<td>
+<input type="checkbox">Membaca<br>
+<input type="checkbox">Menulis<br>
+<input type="checkbox">Catur
+</td>
+
+<td>
+<input type="checkbox">Voli<br>
+<input type="checkbox">Badminton<br>
+<input type="checkbox">Golf
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="submit">
+<input type="submit" value="Submit">
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
