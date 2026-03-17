@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Menu Minuman</title>
+
+<style>
+body{
+    background:#dcdcdc;
+    font-family:"Times New Roman", serif;
+    font-size:22px;
+}
+
+/* HAPUS bullet default */
+ul{
+    list-style-type:none;
+}
+
+/* LEVEL 1 (kotak ungu) */
+.level1 li::before{
+    content:"■";
+    color:#cc00cc;
+    display:inline-block;
+    width:20px;
+}
+
+/* LEVEL 2 (kotak kuning) */
+.level2 li::before{
+    content:"■";
+    color:#ffcc00;
+    display:inline-block;
+    width:20px;
+}
+
+/* LEVEL 3 (tidak ada bullet) */
+.level3 li::before{
+    content:"";
+}
+
+/* JARAK */
+.level2{
+    margin-left:25px;
+}
+.level3{
+    margin-left:35px;
+}
+
+/* WARNA TEKS */
+.cold{
+    color:#ff9900;
+    font-weight:bold;
+}
+
+.hot{
+    color:#ff6600;
+    font-weight:bold;
+}
+
+/* LINK */
+a{
+    color:black;
+    text-decoration:underline;
+}
+
+/* SPASI */
+li{
+    margin:5px 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<ul class="level1">
+    <li>Coffee</li>
+
+    <li>
+        Tea
+        <ul class="level2">
+
+            <li class="cold">
+                Cold Tea
+                <ul class="level3">
+                    <li><a href="#">Jasmine</a></li>
+                    <li><a href="#">Green</a></li>
+                </ul>
+            </li>
+
+            <li class="hot">Hot Tea</li>
+
+        </ul>
+    </li>
+
+    <li>Coca Cola</li>
+</ul>
+
+</body>
+</html>
