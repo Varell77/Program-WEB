@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Colors</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            width: 620px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px gray;
+            margin: 50px auto;
+        }
+
+        .box{
+            width: 40px;
+            height: 40px;
+            border: 2px solid blue;
+            margin: 5px;
+            float: left;
+            background: white;
+            cursor: pointer;
+        }
+
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button id="btnChange">Change colors</button>
+
+        <br><br>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <script>
+
+        $(".box").click(function(){
+
+            $(this).css("background-color", "red");
+            $(this).attr("id", "merah");
+
+        });
+
+        $("#btnChange").click(function(){
+
+            $(".box").each(function(index, domEle){
+
+                if($(domEle).attr("id") == "merah"){
+                    return false;
+                }
+
+                $(domEle).css("background-color", "yellow");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Hover jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        ul.menu{
+            list-style: none;
+            width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #eee;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        ul.menu > li{
+            float: left;
+            width: 150px;
+            margin-right: 10px;
+            background: deeppink;
+            color: white;
+            position: relative;
+            cursor: pointer;
+        }
+
+        ul.menu > li > a{
+            display: block;
+            padding: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul.submenu{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border: 2px solid deeppink;
+            background: white;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 150px;
+        }
+
+        ul.submenu li a{
+            display: block;
+            padding: 5px;
+            color: black;
+            text-decoration: none;
+        }
+
+        ul.submenu li a:hover{
+            background: pink;
+        }
+
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+<ul class="menu">
+
+    <li class="item">
+        <a href="#">jQuery</a>
+
+        <ul class="submenu">
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </li>
+
+    <li class="item">
+        <a href="#">Community</a>
+
+        <ul class="submenu">
+            <li><a href="#">Mailing List</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Demos</a></li>
+            <li><a href="#">Plugins</a></li>
+        </ul>
+    </li>
+
+    <li class="item">
+        <a href="#">Development</a>
+
+        <ul class="submenu">
+            <li><a href="#">Source Code</a></li>
+            <li><a href="#">Bug Tracking</a></li>
+            <li><a href="#">Recent Changes</a></li>
+        </ul>
+    </li>
+
+    <div class="clear"></div>
+
+</ul>
+
+<script>
+
+$(document).ready(function(){
+
+    $("ul.submenu").hide();
+
+    $("li.item").hover(
+
+        function(){
+            $("ul.submenu").hide();
+            $(this).children("ul.submenu").show();
+        },
+
+        function(){
+            $(this).children("ul.submenu").hide();
+        }
+
+    );
+
+});
+
+</script>
+
+</body>
+</html>
